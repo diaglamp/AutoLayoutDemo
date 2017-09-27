@@ -31,6 +31,8 @@
 		D3FF0F1B1F7BDD2400CDFB53 /* TwoMasonryView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0F1A1F7BDD2400CDFB53 /* TwoMasonryView.m */; };
 		D3FF0F1F1F7BE74E00CDFB53 /* IntrinsicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0F1E1F7BE74E00CDFB53 /* IntrinsicVC.m */; };
 		D3FF0F221F7BE7B800CDFB53 /* TwoMasonryLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0F211F7BE7B800CDFB53 /* TwoMasonryLabel.m */; };
+		D3FF0F2A1F7BFF7300CDFB53 /* RemakeConstraintsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0F291F7BFF7300CDFB53 /* RemakeConstraintsVC.m */; };
+		D3FF0F2D1F7BFF9800CDFB53 /* AnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0F2C1F7BFF9800CDFB53 /* AnimatedView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,10 @@
 		D3FF0F201F7BE7B800CDFB53 /* TwoMasonryLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoMasonryLabel.h; sourceTree = "<group>"; };
 		D3FF0F211F7BE7B800CDFB53 /* TwoMasonryLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoMasonryLabel.m; sourceTree = "<group>"; };
 		D3FF0F231F7BEB1C00CDFB53 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D3FF0F281F7BFF7300CDFB53 /* RemakeConstraintsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemakeConstraintsVC.h; sourceTree = "<group>"; };
+		D3FF0F291F7BFF7300CDFB53 /* RemakeConstraintsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemakeConstraintsVC.m; sourceTree = "<group>"; };
+		D3FF0F2B1F7BFF9800CDFB53 /* AnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedView.h; sourceTree = "<group>"; };
+		D3FF0F2C1F7BFF9800CDFB53 /* AnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,7 @@
 				D3FF0F121F7BD67E00CDFB53 /* Support */,
 				D3FF0F0B1F7BD4B700CDFB53 /* Understand */,
 				D3FF0F1C1F7BE67E00CDFB53 /* Intrinsic */,
+				D3FF0F271F7BFF5000CDFB53 /* RemakeConstraints */,
 				D3FF0EB21F77F58600CDFB53 /* AppDelegate.h */,
 				D3FF0EB31F77F58600CDFB53 /* AppDelegate.m */,
 				D3FF0EB51F77F58600CDFB53 /* ViewController.h */,
@@ -244,6 +251,17 @@
 				D3FF0F211F7BE7B800CDFB53 /* TwoMasonryLabel.m */,
 			);
 			path = Intrinsic;
+			sourceTree = "<group>";
+		};
+		D3FF0F271F7BFF5000CDFB53 /* RemakeConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				D3FF0F281F7BFF7300CDFB53 /* RemakeConstraintsVC.h */,
+				D3FF0F291F7BFF7300CDFB53 /* RemakeConstraintsVC.m */,
+				D3FF0F2B1F7BFF9800CDFB53 /* AnimatedView.h */,
+				D3FF0F2C1F7BFF9800CDFB53 /* AnimatedView.m */,
+			);
+			path = RemakeConstraints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +411,7 @@
 				D3FF0EB71F77F58600CDFB53 /* ViewController.m in Sources */,
 				D3FF0EB41F77F58600CDFB53 /* AppDelegate.m in Sources */,
 				D3FF0F011F77FA6400CDFB53 /* MASLayoutConstraint.m in Sources */,
+				D3FF0F2A1F7BFF7300CDFB53 /* RemakeConstraintsVC.m in Sources */,
 				D3FF0F151F7BD67E00CDFB53 /* UIView+YYAdd.m in Sources */,
 				D3FF0EB11F77F58600CDFB53 /* main.m in Sources */,
 				D3FF0F071F77FA6400CDFB53 /* ViewController+MASAdditions.m in Sources */,
@@ -403,6 +422,7 @@
 				D3FF0EFF1F77FA6400CDFB53 /* MASConstraint.m in Sources */,
 				D3FF0F001F77FA6400CDFB53 /* MASConstraintMaker.m in Sources */,
 				D3FF0F181F7BD7F700CDFB53 /* TwoConstraintView.m in Sources */,
+				D3FF0F2D1F7BFF9800CDFB53 /* AnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

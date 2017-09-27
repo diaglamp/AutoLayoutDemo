@@ -54,6 +54,7 @@
     });
     [self addSubview:_rightLabel];
     
+    //layout
     [_leftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(kMarginLeft);
         make.top.mas_greaterThanOrEqualTo(kMarginTop);

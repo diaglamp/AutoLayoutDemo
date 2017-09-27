@@ -52,7 +52,6 @@
         make.left.mas_equalTo(kMarginLeft);
         make.top.mas_equalTo(kMarginTop);
         make.bottom.mas_equalTo(-kMarginBottom);
-        make.width.equalTo(_blueView);
     }];
     
     [_blueView mas_makeConstraints:^(MASConstraintMaker *make) {
