@@ -98,9 +98,9 @@
 //    [super updateConstraints];
 //}
 
-//- (CGSize)intrinsicContentSize
-//{
-//    return CGSizeZero;
-//}
+- (CGSize)intrinsicContentSize
+{
+    return CGSizeMake(SCREEN_WIDTH, UIViewNoIntrinsicMetric);
+}
 
 @end

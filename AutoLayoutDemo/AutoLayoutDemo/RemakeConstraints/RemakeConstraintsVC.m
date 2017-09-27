@@ -21,9 +21,13 @@
     self.title = @"Remake";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _animatedView = [[AnimatedView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 200)];
-    _animatedView.backgroundColor = [UIColor lightGrayColor];
+    _animatedView = [[AnimatedView alloc] init];
     [self.view addSubview:_animatedView];
+    
+    [_animatedView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.and.top.mas_equalTo(0);
+        make.height.mas_equalTo(200);
+    }];
 }
 
 @end
