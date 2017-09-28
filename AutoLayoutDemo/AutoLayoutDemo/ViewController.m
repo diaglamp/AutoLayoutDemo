@@ -10,11 +10,14 @@
 #import "UnderstandVC.h"
 #import "IntrinsicVC.h"
 #import "RemakeConstraintsVC.h"
+#import "AutomaticCell.h"
+
 
 typedef NS_ENUM(NSInteger, VCCellType) {
     VCCellTypeUnderstand,
     VCCellTypeIntrinsic,
-    VCCellTypeRemakeConstraints
+    VCCellTypeRemakeConstraints,
+    VCCellTypeAutomatic,
 };
 
 @interface ViewController ()
@@ -26,6 +29,7 @@ UITableViewDelegate
     NSArray *_cellTypes;
 }
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic,strong) DataModel *dataModel;
 @end
 
 @implementation ViewController
@@ -44,6 +48,10 @@ UITableViewDelegate
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
+    _dataModel = [[DataModel alloc] init];
+    
+    [_tableView registerClass:[AutomaticCell class] forCellReuseIdentifier:NSStringFromClass([AutomaticCell class])];
+    
 }
 
 - (void)updateCellTypes
@@ -52,6 +60,7 @@ UITableViewDelegate
                    @(VCCellTypeUnderstand)
                    ,@(VCCellTypeIntrinsic)
                    ,@(VCCellTypeRemakeConstraints)
+                   ,@(VCCellTypeAutomatic)
                    ];
 }
 
@@ -62,10 +71,57 @@ UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44;
+    CGFloat height = 0;
+    VCCellType type = [_cellTypes[indexPath.row] integerValue];
+    switch (type) {
+        case VCCellTypeUnderstand:
+        case VCCellTypeIntrinsic:
+        case VCCellTypeRemakeConstraints:
+        {
+            height = 44;
+        }   break;
+        case VCCellTypeAutomatic:
+        {
+            static AutomaticCell *cell;
+            //只初始化一次cell
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{
+                cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([AutomaticCell class])];
+            });
+
+            cell.dataModel = _dataModel;
+            
+            if (_dataModel.cellHeight <= 0) {
+                //使用systemLayoutSizeFittingSize获取高度
+                _dataModel.cellHeight = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 1;
+            }
+            
+            height = _dataModel.cellHeight;
+        }   break;
+    }
+    return height;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = nil;
+    VCCellType type = [_cellTypes[indexPath.row] integerValue];
+    switch (type) {
+        case VCCellTypeUnderstand:
+        case VCCellTypeIntrinsic:
+        case VCCellTypeRemakeConstraints:
+        {
+            cell = [self normalCell:tableView atIndexPath:indexPath];
+        }   break;
+        case VCCellTypeAutomatic:
+        {
+            cell = [self automaticCell:tableView atIndexPath:indexPath];
+        }
+    }
+    return cell;
+}
+
+- (UITableViewCell *)normalCell:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *reusedId = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reusedId];
@@ -87,9 +143,18 @@ UITableViewDelegate
         {
             title = @"RemakeConstraints";
         }   break;
+        default:
+            break;
     }
     
     cell.textLabel.text = title;
+    return cell;
+}
+
+- (UITableViewCell *)automaticCell:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
+{
+    AutomaticCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([AutomaticCell class])];
+    cell.dataModel = _dataModel;
     return cell;
 }
 
@@ -111,6 +176,8 @@ UITableViewDelegate
         {
             [self pushToRemakeConstraintsVC];
         }   break;
+        default:
+            break;
     }
 }
 

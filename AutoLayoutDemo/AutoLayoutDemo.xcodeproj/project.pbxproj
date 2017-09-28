@@ -33,6 +33,8 @@
 		D3FF0F221F7BE7B800CDFB53 /* TwoMasonryLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0F211F7BE7B800CDFB53 /* TwoMasonryLabel.m */; };
 		D3FF0F2A1F7BFF7300CDFB53 /* RemakeConstraintsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0F291F7BFF7300CDFB53 /* RemakeConstraintsVC.m */; };
 		D3FF0F2D1F7BFF9800CDFB53 /* AnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0F2C1F7BFF9800CDFB53 /* AnimatedView.m */; };
+		D3FF0F311F7C7E0100CDFB53 /* AutomaticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0F301F7C7E0100CDFB53 /* AutomaticCell.m */; };
+		D3FF0F341F7C83E900CDFB53 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0F331F7C83E900CDFB53 /* DataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,10 @@
 		D3FF0F291F7BFF7300CDFB53 /* RemakeConstraintsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemakeConstraintsVC.m; sourceTree = "<group>"; };
 		D3FF0F2B1F7BFF9800CDFB53 /* AnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedView.h; sourceTree = "<group>"; };
 		D3FF0F2C1F7BFF9800CDFB53 /* AnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedView.m; sourceTree = "<group>"; };
+		D3FF0F2F1F7C7E0100CDFB53 /* AutomaticCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutomaticCell.h; sourceTree = "<group>"; };
+		D3FF0F301F7C7E0100CDFB53 /* AutomaticCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutomaticCell.m; sourceTree = "<group>"; };
+		D3FF0F321F7C83E900CDFB53 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		D3FF0F331F7C83E900CDFB53 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,7 @@
 				D3FF0F0B1F7BD4B700CDFB53 /* Understand */,
 				D3FF0F1C1F7BE67E00CDFB53 /* Intrinsic */,
 				D3FF0F271F7BFF5000CDFB53 /* RemakeConstraints */,
+				D3FF0F2E1F7C7DE000CDFB53 /* AutomaticCell */,
 				D3FF0EB21F77F58600CDFB53 /* AppDelegate.h */,
 				D3FF0EB31F77F58600CDFB53 /* AppDelegate.m */,
 				D3FF0EB51F77F58600CDFB53 /* ViewController.h */,
@@ -262,6 +269,17 @@
 				D3FF0F2C1F7BFF9800CDFB53 /* AnimatedView.m */,
 			);
 			path = RemakeConstraints;
+			sourceTree = "<group>";
+		};
+		D3FF0F2E1F7C7DE000CDFB53 /* AutomaticCell */ = {
+			isa = PBXGroup;
+			children = (
+				D3FF0F2F1F7C7E0100CDFB53 /* AutomaticCell.h */,
+				D3FF0F301F7C7E0100CDFB53 /* AutomaticCell.m */,
+				D3FF0F321F7C83E900CDFB53 /* DataModel.h */,
+				D3FF0F331F7C83E900CDFB53 /* DataModel.m */,
+			);
+			path = AutomaticCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,11 +436,13 @@
 				D3FF0F061F77FA6400CDFB53 /* View+MASAdditions.m in Sources */,
 				D3FF0F0E1F7BD4B700CDFB53 /* UnderstandVC.m in Sources */,
 				D3FF0F221F7BE7B800CDFB53 /* TwoMasonryLabel.m in Sources */,
+				D3FF0F341F7C83E900CDFB53 /* DataModel.m in Sources */,
 				D3FF0F021F77FA6400CDFB53 /* MASViewAttribute.m in Sources */,
 				D3FF0EFF1F77FA6400CDFB53 /* MASConstraint.m in Sources */,
 				D3FF0F001F77FA6400CDFB53 /* MASConstraintMaker.m in Sources */,
 				D3FF0F181F7BD7F700CDFB53 /* TwoConstraintView.m in Sources */,
 				D3FF0F2D1F7BFF9800CDFB53 /* AnimatedView.m in Sources */,
+				D3FF0F311F7C7E0100CDFB53 /* AutomaticCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
