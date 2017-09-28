@@ -9,6 +9,7 @@
 #import "UnderstandVC.h"
 #import "TwoFrameView.h"
 #import "TwoConstraintView.h"
+#import "TwoVFLView.h"
 #import "TwoMasonryView.h"
 
 #define kViewWidth 150
@@ -16,6 +17,7 @@
 
 @interface UnderstandVC ()
 @property (nonatomic, strong) TwoFrameView *frameView;
+@property (nonatomic, strong) TwoVFLView *vflView;
 @property (nonatomic, strong) TwoConstraintView *constraintView;
 @property (nonatomic, strong) TwoMasonryView *masonryView;
 @end
@@ -28,13 +30,16 @@
     self.title = @"Understand";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _frameView = [[TwoFrameView alloc] initWithFrame:CGRectMake(100, 0, kViewWidth, kViewHeight)];
+    _frameView = [[TwoFrameView alloc] initWithFrame:CGRectMake(0, 0, kViewWidth, kViewHeight)];
     [self.view addSubview:_frameView];
     
-    _constraintView = [[TwoConstraintView alloc] initWithFrame:CGRectMake(100, 200, kViewWidth, kViewHeight)];
+    _constraintView = [[TwoConstraintView alloc] initWithFrame:CGRectMake(_frameView.right + 20, 0, kViewWidth, kViewHeight)];
     [self.view addSubview:_constraintView];
     
-    _masonryView = [[TwoMasonryView alloc] initWithFrame:CGRectMake(100, 400, kViewWidth, kViewHeight)];
+    _vflView = [[TwoVFLView alloc] initWithFrame:CGRectMake(0, _frameView.bottom + 20, kViewWidth, kViewHeight)];
+    [self.view addSubview:_vflView];
+    
+    _masonryView = [[TwoMasonryView alloc] initWithFrame:CGRectMake(_constraintView.left, _constraintView.bottom + 20, kViewWidth, kViewHeight)];
     [self.view addSubview:_masonryView];
 }
 

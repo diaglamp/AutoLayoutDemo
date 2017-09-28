@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1FA0012F1F7C9B1C001752CA /* CompatibilityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0012E1F7C9B1C001752CA /* CompatibilityVC.m */; };
 		1FA001331F7CDAB4001752CA /* DebugVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA001321F7CDAB4001752CA /* DebugVC.m */; };
+		1FA001361F7CE466001752CA /* TwoVFLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA001351F7CE466001752CA /* TwoVFLView.m */; };
 		D3FF0EB11F77F58600CDFB53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0EB01F77F58600CDFB53 /* main.m */; };
 		D3FF0EB41F77F58600CDFB53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0EB31F77F58600CDFB53 /* AppDelegate.m */; };
 		D3FF0EB71F77F58600CDFB53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0EB61F77F58600CDFB53 /* ViewController.m */; };
@@ -61,6 +62,8 @@
 		1FA0012E1F7C9B1C001752CA /* CompatibilityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompatibilityVC.m; sourceTree = "<group>"; };
 		1FA001311F7CDAB4001752CA /* DebugVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugVC.h; sourceTree = "<group>"; };
 		1FA001321F7CDAB4001752CA /* DebugVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugVC.m; sourceTree = "<group>"; };
+		1FA001341F7CE466001752CA /* TwoVFLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoVFLView.h; sourceTree = "<group>"; };
+		1FA001351F7CE466001752CA /* TwoVFLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoVFLView.m; sourceTree = "<group>"; };
 		D3FF0EAC1F77F58600CDFB53 /* AutoLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FF0EB01F77F58600CDFB53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D3FF0EB21F77F58600CDFB53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				D3FF0F101F7BD4D900CDFB53 /* TwoFrameView.m */,
 				D3FF0F161F7BD7F700CDFB53 /* TwoConstraintView.h */,
 				D3FF0F171F7BD7F700CDFB53 /* TwoConstraintView.m */,
+				1FA001341F7CE466001752CA /* TwoVFLView.h */,
+				1FA001351F7CE466001752CA /* TwoVFLView.m */,
 				D3FF0F191F7BDD2400CDFB53 /* TwoMasonryView.h */,
 				D3FF0F1A1F7BDD2400CDFB53 /* TwoMasonryView.m */,
 			);
@@ -468,6 +473,7 @@
 				D3FF0EFF1F77FA6400CDFB53 /* MASConstraint.m in Sources */,
 				D3FF0F001F77FA6400CDFB53 /* MASConstraintMaker.m in Sources */,
 				1FA001331F7CDAB4001752CA /* DebugVC.m in Sources */,
+				1FA001361F7CE466001752CA /* TwoVFLView.m in Sources */,
 				D3FF0F181F7BD7F700CDFB53 /* TwoConstraintView.m in Sources */,
 				D3FF0F2D1F7BFF9800CDFB53 /* AnimatedView.m in Sources */,
 				D3FF0F311F7C7E0100CDFB53 /* AutomaticCell.m in Sources */,
