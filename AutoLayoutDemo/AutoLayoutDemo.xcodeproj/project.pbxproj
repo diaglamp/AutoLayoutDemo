@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1FA0012F1F7C9B1C001752CA /* CompatibilityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0012E1F7C9B1C001752CA /* CompatibilityVC.m */; };
+		1FA001331F7CDAB4001752CA /* DebugVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA001321F7CDAB4001752CA /* DebugVC.m */; };
 		D3FF0EB11F77F58600CDFB53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0EB01F77F58600CDFB53 /* main.m */; };
 		D3FF0EB41F77F58600CDFB53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0EB31F77F58600CDFB53 /* AppDelegate.m */; };
 		D3FF0EB71F77F58600CDFB53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0EB61F77F58600CDFB53 /* ViewController.m */; };
@@ -58,6 +59,8 @@
 /* Begin PBXFileReference section */
 		1FA0012D1F7C9B1C001752CA /* CompatibilityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompatibilityVC.h; sourceTree = "<group>"; };
 		1FA0012E1F7C9B1C001752CA /* CompatibilityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompatibilityVC.m; sourceTree = "<group>"; };
+		1FA001311F7CDAB4001752CA /* DebugVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugVC.h; sourceTree = "<group>"; };
+		1FA001321F7CDAB4001752CA /* DebugVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugVC.m; sourceTree = "<group>"; };
 		D3FF0EAC1F77F58600CDFB53 /* AutoLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FF0EB01F77F58600CDFB53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D3FF0EB21F77F58600CDFB53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -155,6 +158,15 @@
 			path = Compatibility;
 			sourceTree = "<group>";
 		};
+		1FA001301F7CDA5A001752CA /* DebugVC */ = {
+			isa = PBXGroup;
+			children = (
+				1FA001311F7CDAB4001752CA /* DebugVC.h */,
+				1FA001321F7CDAB4001752CA /* DebugVC.m */,
+			);
+			path = DebugVC;
+			sourceTree = "<group>";
+		};
 		D3FF0EA31F77F58600CDFB53 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +194,7 @@
 				D3FF0F1C1F7BE67E00CDFB53 /* Intrinsic */,
 				D3FF0F271F7BFF5000CDFB53 /* RemakeConstraints */,
 				D3FF0F2E1F7C7DE000CDFB53 /* AutomaticCell */,
+				1FA001301F7CDA5A001752CA /* DebugVC */,
 				1FA0012C1F7C9A1F001752CA /* Compatibility */,
 				D3FF0EB21F77F58600CDFB53 /* AppDelegate.h */,
 				D3FF0EB31F77F58600CDFB53 /* AppDelegate.m */,
@@ -454,6 +467,7 @@
 				D3FF0F021F77FA6400CDFB53 /* MASViewAttribute.m in Sources */,
 				D3FF0EFF1F77FA6400CDFB53 /* MASConstraint.m in Sources */,
 				D3FF0F001F77FA6400CDFB53 /* MASConstraintMaker.m in Sources */,
+				1FA001331F7CDAB4001752CA /* DebugVC.m in Sources */,
 				D3FF0F181F7BD7F700CDFB53 /* TwoConstraintView.m in Sources */,
 				D3FF0F2D1F7BFF9800CDFB53 /* AnimatedView.m in Sources */,
 				D3FF0F311F7C7E0100CDFB53 /* AutomaticCell.m in Sources */,

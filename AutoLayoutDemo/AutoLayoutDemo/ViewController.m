@@ -12,6 +12,7 @@
 #import "RemakeConstraintsVC.h"
 #import "AutomaticCell.h"
 #import "CompatibilityVC.h"
+#import "DebugVC.h"
 
 
 typedef NS_ENUM(NSInteger, VCCellType) {
@@ -19,6 +20,7 @@ typedef NS_ENUM(NSInteger, VCCellType) {
     VCCellTypeIntrinsic,
     VCCellTypeRemakeConstraints,
     VCCellTypeAutomatic,
+    VCCellTypeDebug,
     VCCellTypeCompatibility,
 };
 
@@ -65,6 +67,7 @@ UITableViewDelegate
                    ,@(VCCellTypeIntrinsic)
                    ,@(VCCellTypeRemakeConstraints)
                    ,@(VCCellTypeAutomatic)
+                   ,@(VCCellTypeDebug)
                    ,@(VCCellTypeCompatibility)
                    ];
 }
@@ -83,6 +86,7 @@ UITableViewDelegate
         case VCCellTypeIntrinsic:
         case VCCellTypeRemakeConstraints:
         case VCCellTypeCompatibility:
+        case VCCellTypeDebug:
         {
             height = 44;
         }   break;
@@ -120,6 +124,7 @@ UITableViewDelegate
         case VCCellTypeIntrinsic:
         case VCCellTypeRemakeConstraints:
         case VCCellTypeCompatibility:
+        case VCCellTypeDebug:
         {
             cell = [self normalCell:tableView atIndexPath:indexPath];
         }   break;
@@ -156,6 +161,10 @@ UITableViewDelegate
         case VCCellTypeCompatibility:
         {
             title = @"Compatibility";
+        }   break;
+        case VCCellTypeDebug:
+        {
+            title = @"Debug";
         }   break;
         default:
             break;
@@ -197,6 +206,10 @@ UITableViewDelegate
         {
             [self pushToCompatibilityVC];
         }   break;
+        case VCCellTypeDebug:
+        {
+            [self pushToDebugVC];
+        }   break;
         default:
             break;
     }
@@ -217,6 +230,12 @@ UITableViewDelegate
 - (void)pushToRemakeConstraintsVC
 {
     RemakeConstraintsVC *vc = [[RemakeConstraintsVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)pushToDebugVC
+{
+    DebugVC *vc = [[DebugVC alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
