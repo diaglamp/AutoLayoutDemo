@@ -28,6 +28,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor = [UIColor lightGrayColor];
         [self initRedView];
         [self initBlueView];
     }
@@ -48,6 +49,21 @@
     [self addSubview:_blueView];
 }
 
+
+//- (void)initRedView
+//{
+//    _redView = [[UIView alloc] init];
+//    _redView.backgroundColor = [UIColor redColor];
+//    [self addSubview:_redView];
+//}
+//
+//- (void)initBlueView
+//{
+//    _blueView = [[UIView alloc] init];
+//    _blueView.backgroundColor = [UIColor blueColor];
+//    [self addSubview:_blueView];
+//}
+//
 //- (void)layoutSubviews
 //{
 //    [super layoutSubviews];

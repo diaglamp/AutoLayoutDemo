@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FA0012F1F7C9B1C001752CA /* CompatibilityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0012E1F7C9B1C001752CA /* CompatibilityVC.m */; };
 		D3FF0EB11F77F58600CDFB53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0EB01F77F58600CDFB53 /* main.m */; };
 		D3FF0EB41F77F58600CDFB53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0EB31F77F58600CDFB53 /* AppDelegate.m */; };
 		D3FF0EB71F77F58600CDFB53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0EB61F77F58600CDFB53 /* ViewController.m */; };
@@ -55,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FA0012D1F7C9B1C001752CA /* CompatibilityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompatibilityVC.h; sourceTree = "<group>"; };
+		1FA0012E1F7C9B1C001752CA /* CompatibilityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompatibilityVC.m; sourceTree = "<group>"; };
 		D3FF0EAC1F77F58600CDFB53 /* AutoLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FF0EB01F77F58600CDFB53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D3FF0EB21F77F58600CDFB53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,6 +146,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FA0012C1F7C9A1F001752CA /* Compatibility */ = {
+			isa = PBXGroup;
+			children = (
+				1FA0012D1F7C9B1C001752CA /* CompatibilityVC.h */,
+				1FA0012E1F7C9B1C001752CA /* CompatibilityVC.m */,
+			);
+			path = Compatibility;
+			sourceTree = "<group>";
+		};
 		D3FF0EA31F77F58600CDFB53 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +182,7 @@
 				D3FF0F1C1F7BE67E00CDFB53 /* Intrinsic */,
 				D3FF0F271F7BFF5000CDFB53 /* RemakeConstraints */,
 				D3FF0F2E1F7C7DE000CDFB53 /* AutomaticCell */,
+				1FA0012C1F7C9A1F001752CA /* Compatibility */,
 				D3FF0EB21F77F58600CDFB53 /* AppDelegate.h */,
 				D3FF0EB31F77F58600CDFB53 /* AppDelegate.m */,
 				D3FF0EB51F77F58600CDFB53 /* ViewController.h */,
@@ -422,6 +435,7 @@
 				D3FF0F051F77FA6400CDFB53 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				D3FF0F1B1F7BDD2400CDFB53 /* TwoMasonryView.m in Sources */,
 				D3FF0F031F77FA6400CDFB53 /* MASViewConstraint.m in Sources */,
+				1FA0012F1F7C9B1C001752CA /* CompatibilityVC.m in Sources */,
 				D3FF0EFE1F77FA6400CDFB53 /* MASCompositeConstraint.m in Sources */,
 				D3FF0F1F1F7BE74E00CDFB53 /* IntrinsicVC.m in Sources */,
 				D3FF0F111F7BD4D900CDFB53 /* TwoFrameView.m in Sources */,

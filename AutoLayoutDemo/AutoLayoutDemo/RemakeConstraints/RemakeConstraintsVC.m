@@ -30,4 +30,22 @@
     }];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"%@ AnimatedViewFrame == %@", NSStringFromSelector(_cmd), NSStringFromCGRect(_animatedView.frame));
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"%@ AnimatedViewFrame == %@", NSStringFromSelector(_cmd), NSStringFromCGRect(_animatedView.frame));
+}
+
+- (void)viewDidLayoutSubviews
+{
+    NSLog(@"%@ AnimatedViewFrame == %@", NSStringFromSelector(_cmd), NSStringFromCGRect(_animatedView.frame));
+}
+
+
 @end

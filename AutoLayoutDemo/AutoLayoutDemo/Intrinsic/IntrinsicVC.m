@@ -23,7 +23,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     _masonryLabel = [[TwoMasonryLabel alloc] initWithFrame:self.view.bounds];
-//    _masonryLabel.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:_masonryLabel];
 }
 

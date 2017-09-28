@@ -11,6 +11,7 @@
 #import "IntrinsicVC.h"
 #import "RemakeConstraintsVC.h"
 #import "AutomaticCell.h"
+#import "CompatibilityVC.h"
 
 
 typedef NS_ENUM(NSInteger, VCCellType) {
@@ -18,6 +19,7 @@ typedef NS_ENUM(NSInteger, VCCellType) {
     VCCellTypeIntrinsic,
     VCCellTypeRemakeConstraints,
     VCCellTypeAutomatic,
+    VCCellTypeCompatibility,
 };
 
 @interface ViewController ()
@@ -63,6 +65,7 @@ UITableViewDelegate
                    ,@(VCCellTypeIntrinsic)
                    ,@(VCCellTypeRemakeConstraints)
                    ,@(VCCellTypeAutomatic)
+                   ,@(VCCellTypeCompatibility)
                    ];
 }
 
@@ -79,6 +82,7 @@ UITableViewDelegate
         case VCCellTypeUnderstand:
         case VCCellTypeIntrinsic:
         case VCCellTypeRemakeConstraints:
+        case VCCellTypeCompatibility:
         {
             height = 44;
         }   break;
@@ -115,6 +119,7 @@ UITableViewDelegate
         case VCCellTypeUnderstand:
         case VCCellTypeIntrinsic:
         case VCCellTypeRemakeConstraints:
+        case VCCellTypeCompatibility:
         {
             cell = [self normalCell:tableView atIndexPath:indexPath];
         }   break;
@@ -147,6 +152,10 @@ UITableViewDelegate
         case VCCellTypeRemakeConstraints:
         {
             title = @"RemakeConstraints";
+        }   break;
+        case VCCellTypeCompatibility:
+        {
+            title = @"Compatibility";
         }   break;
         default:
             break;
@@ -184,6 +193,10 @@ UITableViewDelegate
         {
             [self pushToRemakeConstraintsVC];
         }   break;
+        case VCCellTypeCompatibility:
+        {
+            [self pushToCompatibilityVC];
+        }   break;
         default:
             break;
     }
@@ -204,6 +217,12 @@ UITableViewDelegate
 - (void)pushToRemakeConstraintsVC
 {
     RemakeConstraintsVC *vc = [[RemakeConstraintsVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)pushToCompatibilityVC
+{
+    CompatibilityVC *vc = [[CompatibilityVC alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

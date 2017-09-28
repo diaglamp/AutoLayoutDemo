@@ -25,6 +25,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor = [UIColor lightGrayColor];
         [self initRedView];
         [self initBlueView];
         [self subviewsLayout];
