@@ -43,14 +43,16 @@ UITableViewDelegate
     
     [self updateCellTypes];
     
+    _dataModel = [[DataModel alloc] init];
+    
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    _dataModel = [[DataModel alloc] init];
+    _tableView.tableFooterView = [[UIView alloc] init];
     
-    [_tableView registerClass:[AutomaticCell class] forCellReuseIdentifier:NSStringFromClass([AutomaticCell class])];
+    
     
 }
 
@@ -87,6 +89,9 @@ UITableViewDelegate
             static dispatch_once_t onceToken;
             dispatch_once(&onceToken, ^{
                 cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([AutomaticCell class])];
+                if (!cell) {
+                    cell = [[AutomaticCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:NSStringFromClass([AutomaticCell class])];
+                }
             });
 
             cell.dataModel = _dataModel;
@@ -154,6 +159,9 @@ UITableViewDelegate
 - (UITableViewCell *)automaticCell:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
 {
     AutomaticCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([AutomaticCell class])];
+    if (!cell) {
+        cell = [[AutomaticCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:NSStringFromClass([AutomaticCell class])];
+    }
     cell.dataModel = _dataModel;
     return cell;
 }
