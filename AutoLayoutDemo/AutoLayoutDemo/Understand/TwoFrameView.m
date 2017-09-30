@@ -64,13 +64,17 @@
 //    [self addSubview:_blueView];
 //}
 //
-//- (void)layoutSubviews
-//{
-//    [super layoutSubviews];
-//    CGFloat width = (self.width - kMarginLeft - kMarginRight - kMarginBetween)/2.0;
-//    CGFloat height = self.height - kMarginTop - kMarginBottom;
-//    _redView.frame = CGRectMake(kMarginLeft, kMarginTop, width, height);
-//    _blueView.frame = CGRectMake(_redView.right + kMarginBetween, kMarginTop, width, height);
-//}
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    if (_isAutoLayout) {
+        CGFloat width = (self.width - kMarginLeft - kMarginRight - kMarginBetween)/2.0;
+        CGFloat height = self.height - kMarginTop - kMarginBottom;
+        _redView.frame = CGRectMake(kMarginLeft, kMarginTop, width, height);
+        _blueView.frame = CGRectMake(_redView.right + kMarginBetween, kMarginTop, width, height);
+    }
+    
+}
 
 @end

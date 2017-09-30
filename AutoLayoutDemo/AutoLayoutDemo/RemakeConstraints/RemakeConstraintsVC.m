@@ -33,8 +33,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    [self.view setNeedsLayout];
-//    [self.view layoutIfNeeded];
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
     NSLog(@"%@ AnimatedViewFrame == %@", NSStringFromSelector(_cmd), NSStringFromCGRect(_animatedView.frame));
 }
 

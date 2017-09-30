@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TwoFrameView : UIView
-
+@property (nonatomic, assign) BOOL isAutoLayout;
 @end

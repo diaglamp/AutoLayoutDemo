@@ -77,7 +77,7 @@
     [self setNeedsUpdateConstraints];
     
     UILayoutPriority priority = UILayoutPriorityDefaultHigh + (_modeSwitch.on ? + 1 : - 1);
-    [_blueView mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [_blueView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_redView.mas_right).offset(kMarginBetween);
         make.top.bottom.and.width.equalTo(_redView);
         make.right.equalTo(self).priority(priority);
